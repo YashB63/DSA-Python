@@ -93,6 +93,62 @@ def mysum(x):
     - When LOOK THROUGH ABOUT HALF of the elements in the listy -> Average case
 
     Orders of Growth:
+        Goals:
+
+        Want ot evaluate program's efficiency when INPUT IS VERY BIG
         
+        Want to express the GROWTH OF PROGRAM'S RUN TIME as input size grows
+
+        Want to put an UPPER BOUND on growth - as tight as possible
+
+        Do not need to be precise: "ORDER OF" NOT "EXACT" growth
+
+        We will look at LARGEST FACTORS in run time(which section of the program will take the longest to run?)
+
+        THUS, GENERALLY WE WANT TIGHT UPPER BOUND ON GROWTH, AS FUNCTION OF SIZE OF INPUT, IN WORST CASE 
+
+    
+    MEASURING ORDER OF GROWTH: BIG OH NOTATION
+
+        Big Oh notation measures an UPPER BOUND ON THE ASYMPTOTIC GROWTH, often called order of growth.
+
+        BIG OH OR O() is used to describe worst case occurs often and is the bottleneck when a program runs.
+
+        Express the rate of growth of program relative to the input size
+
+        Evaluate algorithm NOT machine or implementation.
+
+
+        eg: n^2 + 2n + 2 ek equation militime complexity calculate karne ke baad
+
+        ab pehli cheez kya karni hai ki additive constants uda to
+
+        to eqn will be: n^2 + 2n
+
+        next kya kro ki multiplicative constants uda Do
+
+        to eqn will be: n^2 + n  => time complexity is O(n^2)
+
+        eg 2: n^2 + 100000n + 3^1000    => time complexity is O(n^2)
+
+        eg 3: log(n) + n + 4  => n is greater than log(n) => time complexity is O(n)
+
+        eg4: 0.0001*n*log(n) + 300n => constants hatne ke baad agar bohot bade number ke liye socha jaaye 
+        to n*log(n) , n se bada rahega => implies the time complexity is O(n*log(n))
+
+        eg5: 2n^30 + 3^n => yaha 3^n bade number ke liye humesha n^30 se bada hoga isiliye 
+        time complexity hogi O(3^n)
+
+    Graph Types of Order of growth will always be one of these six types:
+
+        Constant
+        Linear
+        Quadratic
+        Logarithmic
+        n log n
+        Exponential
+
+        in graphs mey x axis par input rahega and
+        y axis par rahega time taken by the program
 
 
