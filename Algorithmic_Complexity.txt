@@ -1,0 +1,98 @@
+What is efficiency in programming?
+
+
+Time Efficiency:
+
+Maanlo hum google par gaye aur humne daala Maharashtra. To google crores and crores of webpages ko search karega jaha par 
+Maharashtra Keyword mentioned ho.
+Ab google kya krta hai ki bahut saare webpages milne ke baad usko sort karta hai. 
+is basis par ke jo web pages hum dikha rahe hai vo relevant hai bhi ya nahi.
+
+aur ye pura kaam google 1 second se kam mey kar leta hai.
+ye karne ke liye google ek algorithm use karta hai jise kehte hai page rank.
+agar google itna efficient nahi hota to usey koi use nahi karta and is se google ko crores ka nuksaan ho jaata 
+
+isiliye time complexity bohot important hai.
+
+Space Efficiency:
+
+Bahut saare companies apne apps ke lite versions laate hai market mey
+vo isiliye kyuki kaafi saare consumers ke device specs kaafi kam hote hai(2 gb ram/ 32 gb storage etc).
+iske chlte vo log in companies ke heavy apps nahi chala paate hai.
+to companies ko yeh baat samajhti hai ki unka user base jaa rha hai.
+to apne users ko apne app par continue rakhne ke liye companies chote versions nikaalte hai app ke
+isiliye space complexity bahut important hai.
+
+
+
+Techniques to measure Time Efficiency:
+
+1. Measuring time to execute: sidhe sidhe ghadi laga kr time count kar lo
+
+eg: maanlo hume pata karna hai ki 1 se le kar 100 print karne mey kitna time lagta hai
+
+import time
+
+start = time.time()
+for i in range(1,101):
+    print(i)
+
+print(time.time() - start)
+
+isme hoga kya ki jo bhi time laga hoga vo output mey aa jaayega.
+
+But this approach has few problems:
+    Different time for different algorithm 
+    Time Variees if implementation changes 
+    Different machines different time
+    Does not work for extremely small input
+    Time varies for different inputs, but can't establish a relationship
+
+
+
+2. Counting operations involved:
+
+def c_to_f(c):
+    return c*9.0/5 + 32
+
+def mysum(x):
+    total = 0
+    for i in range(x+1):
+        total += i
+    return total
+
+
+    Assume these steps take constant time:
+        Mathematical operations
+        Comparisons
+        assignments
+        accessing objects in memory
+    
+    Then count the number of operations executed as function of size of input
+
+3. Abstract notion of order of growth
+
+    We want to evaluate the algorithm
+    We want to evaluate scalability
+    We want to evaluate in terms of input size
+
+
+
+    Different inputs changes how the program runs:
+
+    - a function that searches for an element in a List
+    
+        def search_for_element(L, e):
+            for i in L:
+                if i == e:
+                    return True
+            return False
+
+    - When e is FIRST ELEMENT in the list -> Best case
+    - When e is NOT IN LIST -> Worst case
+    - When LOOK THROUGH ABOUT HALF of the elements in the listy -> Average case
+
+    Orders of Growth:
+        
+
+
